@@ -178,13 +178,15 @@ document.getElementById("myProducts").innerHTML= display.join(" ");
 
 }
 display();
- myFunction = ()=> {
-      const searchName = document.getElementById("myFilter").value;
+ function myFunction(e) {
+      console.log(e.key);
+      console.log(e.target.value)
       const filterData = data.filter((v)=>{
-      return v.position.includes(searchName);
+      return v.position.includes(e.target.value);
       
    })
-   display(filterData);
+   console.log(filterData);
+   
   };
   ascending = () => {
     const ascending = data.sort((a, b) => {
