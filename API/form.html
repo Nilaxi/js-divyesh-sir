@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="saveInfo(event)">
+
+        <input type="text" id="firstName">
+        <input type="text" id="lastName">
+        <input type="text" id="addressName">
+        <input type="text" id="cityName">
+        <input type="submit" value="submit">
+</form>
+<script>
+    const saveInfo = (e) =>{
+        e.preventDefault();
+        let myuser = {};
+        let obj = document.querySelectorAll("input").forEach((v)=>{
+            if(v.type !== "submit")
+            {
+                    myuser[v.id] = v.value;
+            }
+        })
+        fetch("https://652764aa917d673fd76da1c7.mockapi.io/user",{
+            method : "POST",
+            body : JSON.stringify(myuser),
+            headers : {
+                'Content-Type' : "application/json"
+            }
+        }).then(y => y.json())
+        .then(y=> {
+            console.log(y);
+        })
+    }
+</script>
+</body>
+</html>

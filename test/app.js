@@ -180,14 +180,15 @@ document.getElementById("myProducts").innerHTML= display.join(" ");
 display();
  function myFunction(e) {
       console.log(e.key);
-      console.log(e.target.value)
+      console.log(e.target.value);
       const filterData = data.filter((v)=>{
       return v.position.includes(e.target.value);
       
    })
    console.log(filterData);
    
-  };
+  }
+  myFunction();
   ascending = () => {
     const ascending = data.sort((a, b) => {
         if (a.company > b.company) {
