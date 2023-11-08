@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display" onclick="readMore()"></div>
+    <script>
+        let mystring = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ex ea expedita tempora dicta fugit, exercitationem adipisci magnam velit ab amet beatae iste, iure aut architecto possimus nemo itaque autem commodi? Enim nulla eaque eveniet quibusdam sunt! Ex amet esse facere, aspernatur voluptate ducimus perspiciatis ipsa vel, cupiditate voluptates blanditiis, tenetur dolore voluptatem ab ad consectetur. Molestiae aut, amet magni ipsum, distinctio odit quas dolores rerum deleniti dolor perferendis ab!"
+        let isreadMore = true;
+        const readMore = () => {
+            if(isreadMore)
+            {
+
+               document.getElementById("display").innerHTML = mystring.slice(0,18).concat(" ...readMore")
+            }
+            else
+            {
+                document.getElementById("display").innerHTML = mystring.concat(" ...readless");
+            }
+            isreadMore = !isreadMore
+        }
+       readMore();
+    </script>
+
+
+
+</body>
+
+</html>
