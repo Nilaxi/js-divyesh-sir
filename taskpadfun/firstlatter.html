@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get first character</title>
+</head>
+
+<body>
+
+    <script>
+        let mystring = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus asperiores ipsa recusandae repudiandae animi eaque, at consectetur fugit. Blanditiis beatae quaerat deleniti quae dicta dolor quo cumque. Vel, placeat ipsa."
+        let getchar = mystring.split(" ").map(v => v.charAt(0)).join(" ");
+        
+        document.write(getchar);
+    </script>
+
+</body>
+
+</html>
