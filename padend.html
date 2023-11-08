@@ -6,25 +6,20 @@
     <title>PadStart-End</title>
 </head>
 <body>
-    <div id="demo">try one : </div>
-    <div id="demo1">tryone : </div>
+
+
+ <div id="t1">Number1 : </div>
+    <div id="t2">Number2 : </div>
     <Script>
         let mystring = '1234567899';
+        let slicestrings = mystring.slice(6, 10);
+        let n = slicestrings.padStart(10,"*")
+        document.getElementById("t1").innerHTML = n;
 
-        let p = mystring.slice(0, 2);
-
-        let d = p.padStart(9,"*")
-
-        document.getElementById('demo').innerHTML += d;
-
-
-        let mystring1 = '1234567899';
-
-        let p1 = mystring1.slice(7, 9);
-
-        let d1 = p1.padEnd(9,"*")
-
-        document.getElementById('demo1').innerHTML += d1;
+        let mystring1 = '5268492587';
+        let slicestrings1 = mystring1.slice(0, 3);
+        let n1 = slicestrings1.padEnd(10,"*")
+        document.getElementById("t2").innerHTML = n1; 
     </Script>
 </body>
 </html>
